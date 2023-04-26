@@ -5,7 +5,7 @@ module.exports = {
     es2017: true,
     node: true,
   },
-  extends: ['plugin:svelte/recommended', 'prettier'],
+  extends: ['plugin:svelte/recommended', 'prettier', 'plugin:storybook/recommended'],
   plugins: ['@typescript-eslint', 'import'],
   parser: '@typescript-eslint/parser',
   rules: {

@@ -1,8 +1,6 @@
-<script lang="ts">
+<script context="module" lang="ts">
   import { type VariantProps, cva } from 'class-variance-authority';
   import type { HTMLButtonAttributes } from 'svelte/elements';
-
-  import { cn } from '$lib/utils.js';
 
   const buttonVariants = cva(
     'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background',
@@ -29,12 +27,18 @@
     },
   );
 
-  interface $$Props extends HTMLButtonAttributes, VariantProps<typeof buttonVariants> {}
+  export interface ButtonProps extends HTMLButtonAttributes, VariantProps<typeof buttonVariants> {}
+</script>
+
+<script lang="ts">
+  import { cn } from '$lib/utils.js';
+
+  type $$Props = ButtonProps;
 
   export let variant: $$Props['variant'] = 'default';
   export let size: $$Props['size'] = 'default';
 </script>
 
 <button {...$$props} class={cn(buttonVariants({ variant, size, class: $$props.class }))}>
-  <slot />
+  <slot>button</slot>
 </button>
