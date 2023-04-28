@@ -18,7 +18,7 @@
   }
 
   export const createThemeStore = () => {
-    //----- Util -----//
+    //----- util -----//
     const getInitTheme = () => {
       const theme = THEME_LIST.find((v) => v === localStorage.getItem(STORAGE_KEY));
       return theme ?? 'system';
