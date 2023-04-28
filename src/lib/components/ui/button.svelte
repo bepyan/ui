@@ -31,7 +31,7 @@
 </script>
 
 <script lang="ts">
-  import { cn } from '$lib/utils.js';
+  import { cn } from '$lib/utils';
 
   type $$Props = ButtonProps;
 
@@ -39,6 +39,6 @@
   export let size: $$Props['size'] = 'default';
 </script>
 
-<button {...$$props} class={cn(buttonVariants({ variant, size, class: $$props.class }))}>
+<button {...$$props} class={cn(buttonVariants({ variant, size, class: $$props.class }))} on:click>
   <slot>button</slot>
 </button>
