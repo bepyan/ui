@@ -1,0 +1,16 @@
+---
+title: Switch
+description: A control that allows the user to toggle between checked and not checked.
+---
+
+<script>
+  import Switch from "$lib/components/ui/switch.svelte";
+
+  let checked;
+</script>
+
+<Switch bind:checked>
+  button
+</Switch>
+
+checked: {checked}

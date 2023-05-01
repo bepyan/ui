@@ -1,0 +1,16 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+---
+
+<script>
+  import Button from "$lib/components/ui/button.svelte";
+
+	let number = 0;
+</script>
+
+<Button on:click={() => number += 1}>
+  button
+</Button>
+
+{number} times clicks.

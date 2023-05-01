@@ -1,0 +1,14 @@
+---
+title: Label
+description: Renders an accessible label associated with controls.
+---
+
+<script>
+  import Label from "$lib/components/ui/label.svelte";
+  import Input from "$lib/components/ui/Input.svelte";
+</script>
+
+<div class="flex items-center gap-4">
+  <Label for="email">Email</Label>
+  <Input id="email" class="w-60" />
+</div>
