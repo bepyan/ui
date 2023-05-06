@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Separator from '$lib/components/ui/separator.svelte';
+
   export let data;
 </script>
 
@@ -14,7 +16,7 @@
         </p>
       {/if}
     </div>
-    <hr />
+    <Separator class="my-8" />
     <svelte:component this={data.content} />
   </div>
 </main>
