@@ -3,6 +3,8 @@ title: Introduction
 description: Re-usable components built in svelte inspired by Radix UI and Shadcn UI.
 ---
 
+# h1 Heading
+
 ## h2 Heading
 
 ### h3 Heading

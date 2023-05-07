@@ -7,6 +7,7 @@ export default {
   smartypants: {
     dashes: 'oldschool',
   },
+  layout: './src/lib/components/mdx-layout.svelte',
   remarkPlugins: [],
   rehypePlugins: [
     rehypeSlug,
