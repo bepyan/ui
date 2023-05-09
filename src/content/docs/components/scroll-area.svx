@@ -1,0 +1,35 @@
+---
+title: Scroll Area
+description: Augments native scroll functionality for custom, cross-browser styling.
+---
+
+<script>
+  import Button from "$lib/components/ui/button.svelte";
+  import ScrollArea from "$lib/components/ui/scroll-area.svelte";
+
+  let length = 50;
+  $: tags = Array.from({ length }).map((_, i, a) => `v1.2.0-beta.${a.length - i}`)
+</script>
+
+<div class="not-prose space-y-4">
+  <ScrollArea class="h-72 w-48 rounded-md border">
+    <div class="p-4">
+      <h4 class="mb-4 text-sm font-medium leading-none">Tags</h4>
+      {#each tags as tag}
+          <div class="text-sm" key={tag}>
+            {tag}
+          </div>
+          <div class="my-2" />
+      {/each}
+    </div>
+  </ScrollArea>
+
+  <Button on:click={() => length += 1}>ADD</Button>
+</div>
+
+---
+
+기존 브라우저의 스크롤 동작, UI가 마음에 안들기 때문에 😤 그냥 우리가 새로 만들자.
+- 마우스가 스크롤 영역에 들어왔을 때 스크롤바가 보인다.
+- 스크롤 영역에 따라 스크롤바 크기가 정한다.
+- 스크롤바 영역에 대해서 위치를 커스터마이징할 수 있다.
