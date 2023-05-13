@@ -1,9 +1,15 @@
+import type { Placement } from '@floating-ui/dom';
 import { getContext, setContext } from 'svelte';
-import { get, writable, type Writable } from 'svelte/store';
+import { writable, type Writable } from 'svelte/store';
 
 import useFloating from '$lib/hooks/useFloating';
 
 const CONTEXT_KEY = Symbol();
+
+export interface DropdownProps {
+  defaultOpen: boolean;
+  placement?: Placement;
+}
 
 interface DropdownStore {
   open: Writable<boolean>;
@@ -12,12 +18,14 @@ interface DropdownStore {
   contentRootEl: Writable<HTMLElement | null>;
 }
 
-export const createDropdownStore = ({ defaultOpen }: any) => {
+export const createDropdownStore = ({ defaultOpen, placement }: DropdownProps) => {
   const open = writable(defaultOpen);
   const triggerEl = writable<HTMLElement | null>(null);
   const contentRootEl = writable<HTMLElement | null>(null);
 
-  useFloating(triggerEl, contentRootEl);
+  useFloating(triggerEl, contentRootEl, {
+    placement,
+  });
 
   return setContext<DropdownStore>(CONTEXT_KEY, {
     open,

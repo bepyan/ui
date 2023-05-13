@@ -8,7 +8,7 @@
   const { setDark, setLight, setSystem } = useTheme();
 </script>
 
-<Dropdown>
+<Dropdown placement="bottom-end">
   <Dropdown.Trigger>
     <Button class="w-9 px-0" size="sm" variant="ghost">
       <Sun class="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
