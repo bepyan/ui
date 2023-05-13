@@ -5,7 +5,7 @@ description: Renders an accessible label associated with controls.
 
 <script>
   import Label from "$lib/components/ui/label.svelte";
-  import Input from "$lib/components/ui/Input.svelte";
+  import Input from "$lib/components/ui/input.svelte";
 </script>
 
 <div class="flex items-center gap-4">
