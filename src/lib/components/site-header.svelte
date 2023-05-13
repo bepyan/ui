@@ -1,4 +1,7 @@
 <script lang="ts">
+  import ThemeSwitcher from './theme-switcher.svelte';
+
+  import { browser } from '$app/environment';
   import { page } from '$app/stores';
   import type { NavItem } from '$lib/constants/nav-config';
   import { cn } from '$lib/utils';
@@ -12,7 +15,7 @@
   <div class="container flex h-14 items-center">
     <div class="mr-4 hidden md:flex md:items-center">
       <a class="mr-6 flex items-center space-x-2" href="/">
-        <div class="h-5 w-5 rounded-full bg-foreground mb-1" />
+        <div class="mb-1 h-5 w-5 rounded-full bg-foreground" />
         <span class="hidden font-bold sm:inline-block">bepyan/ui</span>
       </a>
       <nav class="flex items-center gap-6 text-sm font-medium">
@@ -30,7 +33,9 @@
       </nav>
     </div>
     <div class="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">
-      icon
+      {#if browser}
+        <ThemeSwitcher />
+      {/if}
     </div>
   </div>
 </header>
