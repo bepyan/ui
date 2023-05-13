@@ -1,0 +1,29 @@
+---
+title: Dropdown
+description: Displays a menu to the user—such as a set of actions or functions—triggered by a button.
+---
+
+<script>
+  import Dropdown from '$lib/components/ui/dropdown';
+  import Button from "$lib/components/ui/button.svelte";
+</script>
+
+<Dropdown>
+  <Dropdown.Trigger>
+    <Button variant="outline">Open</Button>
+  </Dropdown.Trigger>
+  <Dropdown.Content class="w-56">
+    <Dropdown.Label>My Account</Dropdown.Label>
+    <Dropdown.Separator />
+    <Dropdown.Item>
+      <span>Profile</span>
+      <Dropdown.Shortcut>⇧⌘P</Dropdown.Shortcut>
+    </Dropdown.Item>
+    <Dropdown.Item disabled>
+      <span>Billing</span>
+    </Dropdown.Item>
+    <Dropdown.Item>
+      <span>Settings</span>
+    </Dropdown.Item>
+  </Dropdown.Content>
+</Dropdown>
