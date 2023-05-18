@@ -129,14 +129,36 @@
   .mdx ul {
     @apply my-6 ml-6 list-disc;
   }
-}
 
-[data-theme='light'],
-.dark [data-theme='dark'] {
-  display: block;
-}
+  /* shiki code block */
+  [data-theme='light'],
+  .dark [data-theme='dark'] {
+    display: block;
+  }
 
-[data-theme='dark'],
-.dark [data-theme='light'] {
-  display: none;
+  [data-theme='dark'],
+  .dark [data-theme='light'] {
+    display: none;
+  }
+
+  /* rehype-autolink-headings */
+  .mdx .anchor {
+    @apply absolute -ml-9 mt-1 flex h-6 w-6 items-center justify-center opacity-0 transition-all;
+    @apply rounded-md border-none no-underline ring-1 ring-border;
+    @apply hover:shadow hover:ring-border;
+  }
+
+  .mdx .anchor:after {
+    content: ' ';
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' aria-hidden='true'%3E%3Cpath d='M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' /%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    @apply h-4 w-4 bg-popover-foreground;
+  }
+
+  .mdx .anchor:hover,
+  .mdx *:hover > .anchor {
+    @apply md:opacity-100;
+  }
 }
