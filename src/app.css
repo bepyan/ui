@@ -79,3 +79,64 @@
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }
+
+@layer base {
+  .mdx pre {
+    @apply mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border py-4 data-[theme=dark]:bg-background data-[theme=light]:bg-white;
+  }
+  .mdx pre .line {
+    @apply inline-block min-h-[1rem] w-full px-4 py-0.5;
+  }
+  .mdx :not(pre) code {
+    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm;
+  }
+
+  .mdx h1 {
+    @apply mt-2 scroll-m-20 text-4xl font-bold;
+  }
+  .mdx h2 {
+    @apply mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0;
+  }
+  .mdx h3 {
+    @apply mt-8 scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+  .mdx h4 {
+    @apply mt-8 scroll-m-20 text-lg font-semibold tracking-tight;
+  }
+  .mdx h5 {
+    @apply mt-8 scroll-m-20 text-lg font-semibold tracking-tight;
+  }
+  .mdx h6 {
+    @apply mt-8 scroll-m-20 text-base font-semibold tracking-tight;
+  }
+  .mdx p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  .mdx a {
+    @apply font-medium underline underline-offset-4;
+  }
+  .mdx blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+
+  .mdx li {
+    @apply mt-2;
+  }
+  .mdx ol {
+    @apply my-6 ml-6 list-decimal;
+  }
+  .mdx ul {
+    @apply my-6 ml-6 list-disc;
+  }
+}
+
+[data-theme='light'],
+.dark [data-theme='dark'] {
+  display: block;
+}
+
+[data-theme='dark'],
+.dark [data-theme='light'] {
+  display: none;
+}
