@@ -1,4 +1,7 @@
 <script context="module" lang="ts">
+  import mediumZoom from 'medium-zoom';
+  import { onMount } from 'svelte';
+
   import hr from './mdx-components/hr.svelte';
   import img from './mdx-components/img.svelte';
   import table from './mdx-components/table.svelte';
@@ -14,6 +17,12 @@
 
   export let title = '';
   export let description = '';
+
+  onMount(() => {
+    mediumZoom(document.querySelectorAll('.mdx img'), {
+      background: 'hsl(var(--background))',
+    });
+  });
 </script>
 
 <div class="mdx mx-auto w-full min-w-0">
