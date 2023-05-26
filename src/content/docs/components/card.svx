@@ -7,7 +7,7 @@ refs:
 ---
 
 <script>
-  import Example from "$lib/components/mdx/Example.svelte";
+  import Example from "$lib/components/mdx/example.svelte";
   import E1 from "./card.e1.svelte"
   import E2 from "./card.e2.svelte"
 </script>

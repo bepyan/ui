@@ -7,7 +7,7 @@ refs:
 ---
 
 <script>
-  import Example from "$lib/components/mdx/Example.svelte";
+  import Example from "$lib/components/mdx/example.svelte";
   import Button from "$lib/components/ui/button.svelte";
 </script>
 

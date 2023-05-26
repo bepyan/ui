@@ -7,7 +7,7 @@ refs:
 ---
 
 <script>
-  import Example from "$lib/components/mdx/Example.svelte";
+  import Example from "$lib/components/mdx/example.svelte";
   import E1 from "./dropdown.e1.svelte"
 </script>
 

@@ -6,7 +6,7 @@ refs:
 ---
 
 <script>
-  import Example from "$lib/components/mdx/Example.svelte";
+  import Example from "$lib/components/mdx/example.svelte";
   import Input from "$lib/components/ui/input.svelte";
 </script>
 
