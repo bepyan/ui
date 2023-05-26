@@ -1,10 +1,23 @@
 ---
 title: Input
 description: Displays a form input field or a component that looks like an input field.
+refs:
+  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/input.svelte
 ---
 
+<script>
+  import Example from "$lib/components/mdx/Example.svelte";
+  import Input from "$lib/components/ui/input.svelte";
+</script>
+
+<Example>
+  <Input type="email" placeholder="Email" />
+</Example>
+
+```svelte
 <script>
   import Input from "$lib/components/ui/input.svelte";
 </script>
 
-<Input />
+<Input type="email" placeholder="Email" />
+```

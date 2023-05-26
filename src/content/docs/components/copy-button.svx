@@ -1,0 +1,15 @@
+---
+title: Copy Button
+description: Renders an accessible label associated with controls.
+refs:
+  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/copy-button.svelte
+---
+
+<script>
+  import Example from "$lib/components/mdx/Example.svelte";
+  import CopyButton from "$lib/components/ui/copy-button.svelte";
+</script>
+
+<Example>
+  <CopyButton />
+</Example>

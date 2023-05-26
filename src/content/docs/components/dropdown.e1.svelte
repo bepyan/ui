@@ -1,21 +1,3 @@
----
-title: Dropdown
-description: Displays a menu to the user—such as a set of actions or functions—triggered by a button.
-refs:
-  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/dropdown.svelte
-  Radix UI: https://www.radix-ui.com/docs/primitives/components/dropdown-menu
----
-
-<script>
-  import Example from "$lib/components/mdx/Example.svelte";
-  import E1 from "./dropdown.e1.svelte"
-</script>
-
-<Example>
-  <E1 />
-</Example>
-
-```svelte
 <script>
   import Button from '$lib/components/ui/button.svelte';
   import {
@@ -48,4 +30,3 @@ refs:
     </DropdownItem>
   </DropdownContent>
 </Dropdown>
-```

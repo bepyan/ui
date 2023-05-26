@@ -51,6 +51,7 @@ module.exports = {
         'svelte/prefer-class-directive': 'error',
         'svelte/prefer-style-directive': 'error',
         'svelte/spaced-html-comment': 'error',
+        'svelte/no-at-html-tags': 'off',
       },
     },
   ],

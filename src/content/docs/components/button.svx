@@ -1,16 +1,36 @@
 ---
 title: Button
 description: Displays a button or a component that looks like a button.
+refs:
+  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/button.svelte
+  shadcn/ui: https://ui.shadcn.com/docs/components/button
 ---
 
 <script>
+  import Example from "$lib/components/mdx/Example.svelte";
   import Button from "$lib/components/ui/button.svelte";
-
-	let number = 0;
 </script>
 
-<Button on:click={() => number += 1}>
-  button
-</Button>
+<Example>
+  <div class="flex gap-2">
+    <Button>button</Button>
+    <Button variant="secondary">secondary</Button>
+    <Button variant="outline">outline</Button>
+    <Button variant="ghost">ghost</Button>
+    <Button variant="destructive">destructive</Button>
+    <Button variant="link">link</Button>
+  </div>
+</Example>
 
-{number} times clicks.
+```svelte
+<script>
+  import Button from "$lib/components/ui/button.svelte";
+</script>
+
+<Button>button</Button>
+<Button variant="secondary">secondary</Button>
+<Button variant="outline">outline</Button>
+<Button variant="ghost">ghost</Button>
+<Button variant="destructive">destructive</Button>
+<Button variant="link">link</Button>
+```

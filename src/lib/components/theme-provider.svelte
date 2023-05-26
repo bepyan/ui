@@ -8,8 +8,8 @@
   const COLOR_SCHEME_LIST = ['light', 'dark'] as const;
   const THEME_LIST = ['light', 'dark', 'system'] as const;
 
-  type SchemeType = (typeof COLOR_SCHEME_LIST)[number];
-  type ThemeType = (typeof THEME_LIST)[number];
+  export type SchemeType = (typeof COLOR_SCHEME_LIST)[number];
+  export type ThemeType = (typeof THEME_LIST)[number];
 
   export interface ThemeStore extends Readable<ThemeType> {
     setLight: () => void;

@@ -1,10 +1,23 @@
 ---
 title: Textarea
 description: Displays a form textarea or a component that looks like a textarea.
+refs:
+  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/textarea.svelte
 ---
 
+<script>
+  import Example from "$lib/components/mdx/example.svelte";
+  import Textarea from "$lib/components/ui/textarea.svelte";
+</script>
+
+<Example>
+  <Textarea placeholder="please wirte down..." />
+</Example>
+
+```svelte
 <script>
   import Textarea from "$lib/components/ui/textarea.svelte";
 </script>
 
-<Textarea />
+<Textarea placeholder="please wirte down..." />
+```

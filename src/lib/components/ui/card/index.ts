@@ -2,8 +2,8 @@ import CardContent from './card-content.svelte';
 import CardDescription from './card-description.svelte';
 import CardFooter from './card-footer.svelte';
 import CardHeader from './card-header.svelte';
-import CardRoot from './card-root.svelte';
 import CardTitle from './card-title.svelte';
+import CardRoot from './card.svelte';
 
 const Card = CardRoot as typeof CardRoot & {
   Content: typeof CardContent;

@@ -1,8 +1,24 @@
 ---
 title: Label
 description: Renders an accessible label associated with controls.
+refs:
+  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/label.svelte
 ---
 
+<script>
+  import Example from "$lib/components/mdx/Example.svelte";
+  import Label from "$lib/components/ui/label.svelte";
+  import Input from "$lib/components/ui/input.svelte";
+</script>
+
+<Example>
+  <div class="flex items-center gap-4">
+    <Label for="email">Email</Label>
+    <Input id="email" class="w-60" />
+  </div>
+</Example>
+
+```svelte
 <script>
   import Label from "$lib/components/ui/label.svelte";
   import Input from "$lib/components/ui/input.svelte";
@@ -12,3 +28,4 @@ description: Renders an accessible label associated with controls.
   <Label for="email">Email</Label>
   <Input id="email" class="w-60" />
 </div>
+```

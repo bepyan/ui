@@ -1,8 +1,27 @@
 ---
 title: Switch
 description: A control that allows the user to toggle between checked and not checked.
+refs:
+  Github: https://github.com/bepyan/ui/blob/main/src/lib/components/ui/switch.svelte
 ---
 
+<script>
+  import Example from "$lib/components/mdx/example.svelte";
+  import Switch from "$lib/components/ui/switch.svelte";
+
+  let checked;
+</script>
+
+<Example>
+  <Switch bind:checked>
+    button
+  </Switch>
+  <div class="text-sm ml-4">
+    checked: {checked}
+  </div>
+</Example>
+
+```svelte
 <script>
   import Switch from "$lib/components/ui/switch.svelte";
 
@@ -14,3 +33,4 @@ description: A control that allows the user to toggle between checked and not ch
 </Switch>
 
 checked: {checked}
+```
